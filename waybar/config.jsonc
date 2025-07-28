@@ -1,0 +1,193 @@
+{
+  "layer": "top",
+  "position": "top",
+  "exclusive": true,
+  "margin-top": 5,
+  "margin-left": 10,
+  "margin-right": 10,
+  "margin-bottom": -5,
+
+  "modules-left": [
+    "custom/arch-logo",
+    "hyprland/workspaces",
+    "cpu",
+    "memory"
+//    "custom/window_title"
+  ],
+  "modules-center": ["mpris"],
+  "modules-right": [
+    "tray",
+    "wireplumber",
+    "battery",
+    "bluetooth",
+    "network",
+    "powerprofiles",
+    "idle_inhibitor",
+    "language",
+    "custom/custom-shutdown",
+    "custom/custom-reboot",
+    "custom/custom-sleep",
+    "clock",
+    "swaync"
+  ],
+
+"hyprland/workspaces": {
+  "icon-size": 32,
+  "spacing": 16,
+  "on-scroll-up": "hyprctl dispatch workspace r+1",
+  "on-scroll-down": "hyprctl dispatch workspace r-1",
+  "persistent-workspaces": {
+    "eDP-1": [1, 2, 3, 4]
+  }
+},
+"custom/arch-logo": {
+  "icon-size": 32,
+  "format": "",
+  "tooltip": "Arch Linux",
+  "interval": 999999,  // never refresh, static icon
+  "on-click": "xdg-open https://archlinux.org" // optional: open Arch site
+},
+
+
+  "tray": {
+    "icon-size": 15,
+    "spacing": 10,
+    "cursor": true
+  },
+
+  "swaync": {
+    "interval": 1
+  },
+
+  "custom/window_title": {
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/window-title.sh",
+    "interval": 1
+  },
+
+  "wireplumber": {
+    "format": "{volume}% {icon}",
+    "format-muted": "",
+    "on-click": "pavucontrol",
+    "format-icons": ["", "", ""]
+  },
+
+"bluetooth": {
+  "format": " {status}",
+  "format-disabled": " off",
+  "format-connected": " {device_alias}",
+  "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+  "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+  "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+  "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+  "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+  "on-click": "sh -c 'blueman-manager'"
+},
+"battery": {
+  "states": {
+    "good": 95,
+    "warning": 30,
+    "critical": 20
+  },
+  "format": "{icon} {capacity}%",
+  "format-charging": " {capacity}%",
+  "format-plugged": " {capacity}%",
+  "format-alt": "{time} {icon}",
+  "format-icons": [
+    "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
+  ]
+},
+
+
+
+  "custom/custom-shutdown": {
+    "format": "⏻",
+    "tooltip": "Shutdown",
+    "on-click": "systemctl poweroff",
+    "interval": 1
+  },
+
+  "custom/custom-reboot": {
+    "format": "",
+    "tooltip": "Reboot",
+    "on-click": "systemctl reboot",
+    "interval": 1
+  },
+
+  "custom/custom-sleep": {
+    "format": "",
+    "tooltip": "Sleep",
+    "on-click": "systemctl suspend",
+    "interval": 1
+  },
+
+  "network": {
+    "format-wifi": "{icon} {essid}",
+    "format-ethernet": "󰤨",
+    "format-disconnected": "󰌙 disconnected",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤢", "󰤨"],
+    "tooltip-format": "{ifname} via {gwaddr} \n↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}",
+    "on-click": "nm-connection-editor"
+  },
+
+  "clock": {
+    "format": "{:%a %d %b %H:%M}"
+  },
+
+  "mpris": {
+    "format": "🎵 {status_icon} {artist} - {title}",
+    "format-paused": "⏸ {artist} - {title}",
+    "format-stopped": "",
+    "player-icons": {
+      "default": "🎵",
+      "mpv": "▶",
+      "firefox": ""
+    },
+    "status-icons": {
+      "playing": "▶",
+      "paused": "⏸"
+    },
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl stop",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "max-length": 80,
+    "interval": 1
+  },
+
+  "cpu": {
+    "format": " {usage}%",
+    "interval": 2,
+    "tooltip": true
+  },
+
+  "memory": {
+    "format": " {used:0.1f}G/{total:0.1f}G",
+    "interval": 5,
+    "tooltip": true
+  },
+
+  "user": {
+    "format": " {user}",
+    "tooltip": false
+  },
+
+  "language": {
+    "format": "🌐 {lang}",
+    "tooltip": true
+  },
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    },
+    "tooltip": "Idle Inhibitor"
+  },
+
+  "powerprofiles": {
+    "format": "⚡ {profile}",
+    "tooltip": true
+  }
+}

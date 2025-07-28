@@ -1,0 +1,42 @@
+{
+    "wos": {
+        "game": {
+            "mods": {
+                "list": [
+                    {
+                        "name": "Patch",
+                        "package": true,
+                        "version": "4.1.1"
+                    },
+                    {
+                        "name": "CharacterSkins",
+                        "package": true,
+                        "version": "4.0.0"
+                    },
+                    {
+                        "name": "Coldsteel",
+                        "package": true,
+                        "version": "4.1.0"
+                    },
+                    {
+                        "name": "Permissive",
+                        "package": true,
+                        "version": "4.0.0"
+                    },
+                    {
+                        "name": "quirks",
+                        "package": true,
+                        "version": "4.0.0"
+                    }
+                ]
+            },
+            "window": {
+                "size": [
+                    960,
+                    540
+                ],
+                "maximized": false
+            }
+        }
+    }
+}

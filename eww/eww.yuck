@@ -1,0 +1,17 @@
+(defwidget hello []
+  (box :orientation "vertical" :class "popup"
+    (label :text "Hello Bro 😎")
+  )
+)
+
+:defwindow hello-window
+  :focusable false
+  :click-to-close true
+  :monitor 0
+  :geometry (geometry :x "1000" :y "40" :width "200" :height "50")
+  :stacking "overlay"
+  :anchor "top right"
+  :exclusive true
+  :focusable false
+  (hello)
+)

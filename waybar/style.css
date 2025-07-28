@@ -1,0 +1,132 @@
+* {
+  min-height: 0;
+  min-width: 0;
+  font-family: Lexend, "JetBrainsMono NFP", monospace;
+  font-size: 14px;
+  font-weight: 700; /* BOLD FONT */
+}
+
+/* 🌫️ Translucent bar with pastel shadow & margin */
+window#waybar {
+  background-color: rgba(26, 24, 52, 0.55);
+  color: #dbe1fe;
+  border-radius: 22px;
+  margin: 6px 30px;
+  padding: 4px 25px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.5s ease;
+}
+
+/* 🧠 Workspace buttons - rounded and colored */
+#workspaces button {
+  padding: 0.15rem 0.55rem;
+  margin: 0.3rem 0.25rem;
+  border-radius: 22px;
+  font-size: 15px;
+  background-color: rgba(39, 43, 118, 0.3);
+  color: #dbe1fe;
+  border: 1px solid #b2bbfc;
+  font-weight: 700;
+}
+
+#workspaces button:nth-child(1) { border-color: #a8f0ff; color: #a8f0ff; }
+#workspaces button:nth-child(2) { border-color: #9fd5ff; color: #9fd5ff; }
+#workspaces button:nth-child(3) { border-color: #b2bfff; color: #b2bfff; }
+#workspaces button:nth-child(4) { border-color: #c69cff; color: #c69cff; }
+#workspaces button:nth-child(5) { border-color: #bb9eff; color: #bb9eff; }
+#workspaces button:nth-child(6) { border-color: #dabfff; color: #dabfff; }
+
+#workspaces button.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#workspaces button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+#workspaces button.urgent {
+  background-color: #ff80bf;
+  color: #1a1834;
+  border-color: #ff80bf;
+}
+
+/*  Arch logo – sets the shape standard */
+#custom-arch-logo {
+  font-size: 20px;
+  padding: 0.15rem 0.6rem;
+  margin: 0.3rem 0.25rem;
+  border-radius: 22px;
+  background-color: rgba(26, 24, 52, 0.8);
+  color: #a89dff;
+  border: 1px solid #a89dff;
+}
+
+/* 🎨 Universal box style: small height + full pill rounding */
+#hyprland-window,
+#clock,
+#wireplumber,
+#wireplumber-source,
+#battery,
+#bluetooth,
+#network,
+#mpris,
+#custom-custom-shutdown,
+#custom-custom-reboot,
+#custom-custom-sleep,
+#tray,
+#swaync,
+#cpu,
+#memory,
+#user,
+#language,
+#idle_inhibitor,
+#powerprofiles {
+  padding: 0.15rem 0.6rem;
+  margin: 0.3rem 0.25rem;
+  border-radius: 22px;
+  background-color: rgba(39, 43, 118, 0.3);
+  font-weight: 700;
+}
+
+/* 🌈 Gradient color border + text per module */
+#hyprland-window { color: #a8f0ff; font-size: 16px; border: 1px solid #a8f0ff; }
+#clock { color: #9fd5ff; font-size: 13px; border: 1px solid #9fd5ff; }
+#wireplumber, #wireplumber-source { color: #9fcaff; font-size: 13px; border: 1px solid #9fcaff; }
+#battery { color: #b2bfff; font-size: 13px; border: 1px solid #b2bfff; }
+#bluetooth { color: #c69cff; font-size: 13px; border: 1px solid #c69cff; }
+#network { color: #bb9eff; font-size: 16px; border: 1px solid #bb9eff; }
+#mpris { color: #dfc4ff; font-size: 16px; border: 1px solid #dfc4ff; }
+#custom-custom-shutdown { color: #e9aaff; font-size: 16px; border: 1px solid #e9aaff; }
+#custom-custom-reboot { color: #f0b7ff; font-size: 16px; border: 1px solid #f0b7ff; }
+#custom-custom-sleep { color: #f6caff; font-size: 16px; border: 1px solid #f6caff; }
+#tray { color: #c5e1ff; font-size: 16px; border: 1px solid #c5e1ff; }
+#swaync { color: #d1afff; font-size: 16px; border: 1px solid #d1afff; }
+#cpu { color: #afd8ff; font-size: 13px; border: 1px solid #afd8ff; }
+#memory { color: #c1bcff; font-size: 13px; border: 1px solid #c1bcff; }
+#user { color: #dabfff; font-size: 16px; border: 1px solid #dabfff; }
+#language { color: #b7d4ff; font-size: 16px; border: 1px solid #b7d4ff; }
+#idle_inhibitor { color: #caa8ff; font-size: 16px; border: 1px solid #caa8ff; }
+#powerprofiles { color: #b8a2ff; font-size: 13px; border: 1px solid #b8a2ff; }
+
+/* 🔇 Muted state for audio */
+#wireplumber.muted,
+#wireplumber-source.muted {
+  color: #3f4378;
+}
+
+/* Tray icon spacing */
+#tray image {
+  margin: 0 3px;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+/* Tooltip style */
+tooltip {
+  background-color: #1a1834;
+  border: 2px solid #5753f4;
+  color: #dbe1fe;
+}

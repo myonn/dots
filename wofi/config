@@ -1,0 +1,22 @@
+# General
+show=drun
+prompt=Search:
+insensitive=true
+term=alacritty
+allow_images=true
+location=center
+width=30%
+height=30%
+columns=1
+allow_markup=true
+hide_scroll=true
+always_parse_args=false
+
+# Keybinds
+kb-cancel=Escape
+kb-accept=Return
+kb-delete=BackSpace
+kb-row-up=Up
+kb-row-down=Down
+kb-page-up=Page_Up
+kb-page-down=Page_Down

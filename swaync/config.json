@@ -1,0 +1,17 @@
+{
+  "layer": "overlay",
+  "control-center-margin-top": 50,
+  "control-center-margin-bottom": 10,
+  "control-center-margin-right": 30,
+  "control-center-width": 350,
+  "notification-window-width": 350,
+  "notification-margin-right": 30,
+  "notification-margin-top": 30,
+  "notification-visibility-time": 5000,
+  "hide-on-clear": true,
+  "control-center-enabled": true,
+  "notification-window-enabled": true,
+  "position": "top-right"
+}
+
+

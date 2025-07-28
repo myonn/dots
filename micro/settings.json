@@ -1,0 +1,10 @@
+{
+    "autosave": 8,
+    "colorscheme": "gotham",
+    "line_numbers": true,
+    "softwrap": true,
+    
+  	"clipboard": "external",
+ 	 "clipboardcopy": "wl-copy",
+ 	 "clipboardpaste": "wl-paste"
+}
